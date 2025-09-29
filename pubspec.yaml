@@ -1,7 +1,7 @@
 name: dash_curved_tabBar
 description: "A new Flutter project."
-homepage:
-issue_tracker:
+homepage: https://github.com/Androidsignal/dash_curved_tabbar/blob/main/example/main.dart
+issue_tracker: https://github.com/Androidsignal/dash_curved_tabbar/issues
 version: 0.0.1
 
 

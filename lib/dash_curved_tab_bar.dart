@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 enum IconPosition { left, right, top, bottom }
+
 enum TabBarPosition { left, right, center, none }
 
 class DashCurvedTabBar extends StatelessWidget {
@@ -72,9 +73,9 @@ class DashCurvedTabBar extends StatelessWidget {
         border: hideBorders
             ? null
             : Border.all(
-          color: Colors.grey.shade400,
-          width: 1,
-        ),
+                color: Colors.grey.shade400,
+                width: 1,
+              ),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withAlpha(10),
@@ -93,7 +94,7 @@ class DashCurvedTabBar extends StatelessWidget {
               final isSelected = index == selectedIndex;
               final icon = icons != null ? icons![index] : null;
               final badgeCount =
-              badgeCountList != null ? badgeCountList![index] : 0;
+                  badgeCountList != null ? badgeCountList![index] : 0;
               return Expanded(
                 child: GestureDetector(
                   onTap: () => onTap(index),
@@ -113,8 +114,8 @@ class DashCurvedTabBar extends StatelessWidget {
                             curvePosition: index == 0
                                 ? TabBarPosition.right
                                 : index == tabs.length - 1
-                                ? TabBarPosition.left
-                                : TabBarPosition.center,
+                                    ? TabBarPosition.left
+                                    : TabBarPosition.center,
                             isSelected: isSelected,
                           ),
                         ),
@@ -122,19 +123,19 @@ class DashCurvedTabBar extends StatelessWidget {
                         child: icon != null
                             ? buildContent(text, icon, isSelected)
                             : Text(
-                          text,
-                          textAlign: TextAlign.center,
-                          style: isSelected
-                              ? (selectedTabTextStyle ??
-                              const TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 14))
-                              : (unselectedTabTextStyle ??
-                              const TextStyle(
-                                  color: Colors.black87,
-                                  fontSize: 12)),
-                        ),
+                                text,
+                                textAlign: TextAlign.center,
+                                style: isSelected
+                                    ? (selectedTabTextStyle ??
+                                        const TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 14))
+                                    : (unselectedTabTextStyle ??
+                                        const TextStyle(
+                                            color: Colors.black87,
+                                            fontSize: 12)),
+                              ),
                       ),
 
                       // Badge
@@ -172,10 +173,10 @@ class DashCurvedTabBar extends StatelessWidget {
           ),
           // Divider
           if (showDivider)
-          Container(
-            height: dividerHeight ?? 2,
-            color: dividerColor ??  Colors.grey.shade300,
-          ),
+            Container(
+              height: dividerHeight ?? 2,
+              color: dividerColor ?? Colors.grey.shade300,
+            ),
 
           // Content for the selected tab
           if (tabContent != null && tabContent!.isNotEmpty)
@@ -186,7 +187,7 @@ class DashCurvedTabBar extends StatelessWidget {
                 width: double.infinity,
                 padding: tabContentPadding ?? EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color:tabContentColor ??  Colors.grey,
+                  color: tabContentColor ?? Colors.grey,
                   borderRadius: BorderRadius.vertical(
                     bottom: Radius.circular(tabBarBorderRadius ?? 20),
                   ),
@@ -203,20 +204,20 @@ class DashCurvedTabBar extends StatelessWidget {
     final textWidget = hideTabText
         ? const SizedBox.shrink()
         : Flexible(
-      child: Text(
-        text,
-        overflow: TextOverflow.ellipsis,
-        textAlign: TextAlign.center,
-        style: isSelected
-            ? (selectedTabTextStyle ??
-            const TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 14))
-            : (unselectedTabTextStyle ??
-            const TextStyle(color: Colors.black87, fontSize: 12)),
-      ),
-    );
+            child: Text(
+              text,
+              overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.center,
+              style: isSelected
+                  ? (selectedTabTextStyle ??
+                      const TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14))
+                  : (unselectedTabTextStyle ??
+                      const TextStyle(color: Colors.black87, fontSize: 12)),
+            ),
+          );
 
     switch (iconPosition) {
       case IconPosition.left:
@@ -262,6 +263,7 @@ class DashCurvedTabBar extends StatelessWidget {
     }
   }
 }
+
 /// Custom Shape for the curved tab
 class _CurvedShape extends ShapeBorder {
   final bool isSelected;
