@@ -22,8 +22,6 @@ Features curved selection, icon placement, badge notifications, and fully custom
 
 ➕ Divider option between tabs & content.
 
----
-
 ## How to use it ?
 
 ### 1. Add dependency
