@@ -29,7 +29,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  dash_curved_tabBar: <latest_version>
+  dash_curved_tab_bar: <latest_version>
 ```  
 
 ### 2. Install it You can install packages from the command line: 
@@ -47,7 +47,7 @@ $ flutter pub get
 Now in your `Dart` code, you can use :
 
 ```
-import 'package:dash_curved_tabBar/dash_curved_tabBar.dart';
+import 'package:dash_curved_tab_bar/dash_curved_tab_bar.dart';
 ```
 
 ### 4. Use it
