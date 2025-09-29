@@ -1,4 +1,4 @@
-import 'package:dash_curved_tabBar/dash_curved_tab_bar.dart';
+import 'package:dash_curved_tab_bar/dash_curved_tab_bar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
