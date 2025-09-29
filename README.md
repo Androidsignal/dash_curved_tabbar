@@ -152,7 +152,7 @@ DashCurvedTabBar(
 
 ### Add Tabcontent for all customization
 
-dash_curved_tabBar is designed to be highly flexible so you can create beautiful, interactive tab bars for your Flutter app. Here’s what you can customize:
+`dash_curved_tabBar` is designed to be highly flexible so you can create beautiful, interactive tab bars for your Flutter app. Here’s what you can customize:
 
 * Tabs & Labels – Set your own tab names with any text you like.
 
