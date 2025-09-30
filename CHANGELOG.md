@@ -4,6 +4,11 @@ All notable changes to the **dash_curved_tabBar** package will be documented in 
 This project follows [Semantic Versioning](https://semver.org/).
 
 ---
+## [0.0.2]
+
+- update documentation for better understanding of the package.
+
+
 ## [0.0.1]
 
 - Initial release of `dash_curved_tabBar`.

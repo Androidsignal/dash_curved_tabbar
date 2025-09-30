@@ -274,5 +274,5 @@ There are a bunch of things you can do if you want to contribute!
 The Contributor Guide has all the information you need for everything from reporting bugs to contributing new features.
   
 # Credits 
-`dash_curved_tabBar` is owned and maintained by the `Dashstack team`.
+`dash_curved_tabBar` is owned and maintained by the `Dashstack team,Surat`.
 Follow us for updates and new releases 🚀.
