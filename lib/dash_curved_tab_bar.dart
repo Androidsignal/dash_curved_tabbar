@@ -1,37 +1,99 @@
 import 'package:flutter/material.dart';
 
+/// Defines the position of the icon relative to the tab text.
 enum IconPosition { left, right, top, bottom }
 
+/// Defines the position of the curved edges within the tab bar.
 enum TabBarPosition { left, right, center, none }
 
+/// A customizable curved tab bar widget for Flutter.
+///
+/// This widget supports:
+/// - Curved selection background
+/// - Icons and text with customizable positions
+/// - Optional badge counts
+/// - Animated selection changes
+/// - Optional tab content area below the bar
 class DashCurvedTabBar extends StatelessWidget {
+  /// The list of tab labels.
   final List<String> tabs;
+
+  /// Optional icons to display alongside each tab.
   final List<Widget>? icons;
+
+  /// Optional badge counts for each tab.
   final List<int>? badgeCountList;
+
+  /// Padding inside the tab bar container.
   final EdgeInsetsGeometry? tabPadding;
+
+  /// Margin around the tab bar container.
   final EdgeInsetsGeometry? tabMargin;
+
+  /// The index of the currently selected tab.
   final int selectedIndex;
+
+  /// Callback triggered when a tab is tapped.
   final ValueChanged<int> onTap;
+
+  /// Height of the tab bar.
   final double tabBarHeight;
+
+  /// Border radius of the tab bar background.
   final double? tabBarBorderRadius;
+
+  /// Background color of the selected tab.
   final Color selectedTabColor;
+
+  /// Text style for the selected tab label.
   final TextStyle? selectedTabTextStyle;
+
+  /// Text style for unselected tab labels.
   final TextStyle? unselectedTabTextStyle;
+
+  /// Duration of the selection animation.
   final Duration animationDuration;
+
+  /// Position of the icon relative to the text.
   final IconPosition iconPosition;
+
+  /// Whether to hide the tab text and show only icons.
   final bool hideTabText;
+
+  /// Optional content widgets displayed below the tab bar.
   final List<Widget>? tabContent;
+
+  /// Padding for the tab content container.
   final EdgeInsetsGeometry? tabContentPadding;
+
+  /// Background color for the badge indicator.
   final Color badgeColor;
+
+  /// Diameter of the badge circle.
   final double badgeSize;
+
+  /// Text style used inside the badge.
   final TextStyle? badgeTextStyle;
+
+  /// Offset applied to the badge position.
   final Offset badgeOffset;
+
+  /// Whether to show a divider below the tab bar.
   final bool showDivider;
+
+  /// Whether to hide the outer borders of the tab bar.
   final bool hideBorders;
+
+  /// Height of the divider below the tab bar.
   final double? dividerHeight;
+
+  /// Color of the divider below the tab bar.
   final Color? dividerColor;
+
+  /// Background color of the tab content container.
   final Color? tabContentColor;
 
+  /// Creates a [DashCurvedTabBar].
   const DashCurvedTabBar({
     super.key,
     required this.tabs,
@@ -171,6 +233,7 @@ class DashCurvedTabBar extends StatelessWidget {
               );
             }).toList(),
           ),
+
           // Divider
           if (showDivider)
             Container(
@@ -185,7 +248,7 @@ class DashCurvedTabBar extends StatelessWidget {
               child: Container(
                 key: ValueKey<int>(selectedIndex),
                 width: double.infinity,
-                padding: tabContentPadding ?? EdgeInsets.all(16),
+                padding: tabContentPadding ?? const EdgeInsets.all(16),
                 decoration: BoxDecoration(
                   color: tabContentColor ?? Colors.grey,
                   borderRadius: BorderRadius.vertical(
@@ -200,6 +263,8 @@ class DashCurvedTabBar extends StatelessWidget {
     );
   }
 
+  /// Builds the content for a tab by combining icon and text
+  /// based on the [iconPosition] and [hideTabText] properties.
   Widget buildContent(String text, Widget icon, bool isSelected) {
     final textWidget = hideTabText
         ? const SizedBox.shrink()
@@ -264,12 +329,18 @@ class DashCurvedTabBar extends StatelessWidget {
   }
 }
 
-/// Custom Shape for the curved tab
+/// Custom shape used for drawing curved tabs.
 class _CurvedShape extends ShapeBorder {
+  /// Whether the tab is currently selected.
   final bool isSelected;
+
+  /// Border radius applied to the top corners.
   final double borderRadius;
+
+  /// Position of the curved edge in the tab bar.
   final TabBarPosition curvePosition;
 
+  /// Creates a [_CurvedShape] for the curved tab bar.
   const _CurvedShape({
     this.isSelected = false,
     this.borderRadius = 10,
@@ -292,8 +363,8 @@ class _CurvedShape extends ShapeBorder {
         rect,
         topLeft: Radius.circular(borderRadius),
         topRight: Radius.circular(borderRadius),
-        bottomLeft: Radius.circular(0),
-        bottomRight: Radius.circular(0),
+        bottomLeft: const Radius.circular(0),
+        bottomRight: const Radius.circular(0),
       ));
 
       switch (curvePosition) {
