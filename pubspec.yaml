@@ -2,7 +2,7 @@ name: dash_curved_tab_bar
 description: "A customizable curved tab bar for Flutter with icon, badge, and connected content support."
 homepage: https://github.com/Androidsignal/dash_curved_tabbar/blob/main/example/main.dart
 issue_tracker: https://github.com/Androidsignal/dash_curved_tabbar/issues
-version: 0.0.2
+version: 0.0.3
 
 
 environment:
