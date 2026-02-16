@@ -1,5 +1,5 @@
 
-[![DashStackPoster](https://github.com/user-attachments/assets/89ec20a1-c644-43b1-8092-17851962511b)](https://dashstack.notion.site/Ravi-Vithani-e65c362e335d45ef993225687e4aacb8?pvs=143)
+[![DashStackPoster](https://github.com/user-attachments/assets/89ec20a1-c644-43b1-8092-17851962511b)](https://www.dashstack.tech/)
 
 # Dash Curved TabBar
 
